@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)https://customer-assets-v7afamib.emergentagent.net/wingman/92152b36-d617-4167-b6a9-e37797323465/attachments/54638fed2cc34c259f13ea6555fb289e_index.html -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merve'nin Sihirli Dünyası ✨</title>
+<link href="./Dashboard_files/css2" rel="stylesheet">
+<style>
+:root {
+  --bg-dark: #1a0f0a;
+  --bg-card: #2a1810;
+  --bg-card-hover: #3a2218;
+  --parchment: #f4e4c1;
+  --parchment-dark: #d4c4a1;
+  --gold: #d4a853;
+  --gold-bright: #f0c75e;
+  --gold-dim: #a07830;
+  --burgundy: #6b1d2e;
+  --burgundy-light: #8b3040;
+  --forest: #2d4a2e;
+  --forest-light: #3d6a3e;
+  --amber: #e8a832;
+  --amber-glow: rgba(232, 168, 50, 0.3);
+  --warm-shadow: rgba(212, 168, 83, 0.15);
+  --text-primary: #f4e4c1;
+  --text-secondary: #c4a47a;
+  --text-muted: #8a6a4a;
+  --border-gold: rgba(212, 168, 83, 0.3);
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 70px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'EB Garamond', serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Magical Particles */
+#particles-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: linear-gradient(180deg, #1a0f0a 0%, #2a1510 50%, #1a0f0a 100%);
+  border-right: 1px solid var(--border-gold);
+  padding: 20px 0;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease, transform 0.3s ease;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 15px 20px 25px;
+  border-bottom: 1px solid var(--border-gold);
+  margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px var(--amber-glow);
+}
+
+.sidebar-header .subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  gap: 12px;
+}
+
+.nav-item:hover {
+  background: rgba(212, 168, 83, 0.08);
+  color: var(--text-primary);
+  border-left-color: var(--gold-dim);
+}
+
+.nav-item.active {
+  background: rgba(212, 168, 83, 0.12);
+  color: var(--gold);
+  border-left-color: var(--gold);
+  text-shadow: 0 0 8px var(--amber-glow);
+}
+
+.nav-item .nav-icon {
+  font-size: 1.2rem;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.nav-item .nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile menu */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 15px; left: 15px;
+  z-index: 200;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  color: var(--gold);
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Main Content */
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 40px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section pages */
+.section-page {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.section-page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, #2e1a12 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(212,168,83,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4), 0 0 15px var(--warm-shadow);
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Welcome Section */
+.welcome-greeting {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: var(--gold-bright);
+  text-shadow: 0 0 20px var(--amber-glow), 0 0 40px rgba(232,168,50,0.1);
+  margin-bottom: 8px;
+}
+
+.welcome-sub {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.welcome-date {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* Fireplace */
+.fireplace-container {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin: 20px 0 30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fire {
+  position: relative;
+  width: 120px;
+  height: 60px;
+}
+
+.flame {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 20% 20%;
+  animation: flicker 1.5s ease-in-out infinite alternate;
+}
+
+.flame-main {
+  width: 40px; height: 50px;
+  left: 40px;
+  background: linear-gradient(#ff6600, #ff9900, #ffcc00);
+  opacity: 0.9;
+  animation-duration: 1.2s;
+}
+
+.flame-left {
+  width: 25px; height: 35px;
+  left: 20px; bottom: 0;
+  background: linear-gradient(#ff4400, #ff8800, #ffaa00);
+  opacity: 0.7;
+  animation-duration: 1.8s;
+  animation-delay: 0.2s;
+}
+
+.flame-right {
+  width: 30px; height: 40px;
+  left: 65px; bottom: 0;
+  background: linear-gradient(#ff5500, #ff9900, #ffbb00);
+  opacity: 0.75;
+  animation-duration: 1.4s;
+  animation-delay: 0.4s;
+}
+
+.flame-small1 {
+  width: 15px; height: 20px;
+  left: 50px; bottom: 0;
+  background: linear-gradient(#ffcc00, #ffee00);
+  opacity: 0.6;
+  animation-duration: 0.9s;
+}
+
+.flame-small2 {
+  width: 12px; height: 18px;
+  left: 30px; bottom: 0;
+  background: linear-gradient(#ffaa00, #ffdd00);
+  opacity: 0.5;
+  animation-duration: 1.1s;
+  animation-delay: 0.3s;
+}
+
+.embers {
+  position: absolute;
+  bottom: 0;
+  left: 10px; right: 10px;
+  height: 8px;
+  background: radial-gradient(ellipse, #ff4400 0%, #cc2200 40%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: ember-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: scaleY(1) scaleX(1) translateX(0); }
+  25% { transform: scaleY(1.1) scaleX(0.9) translateX(-2px); }
+  50% { transform: scaleY(0.9) scaleX(1.1) translateX(1px); }
+  75% { transform: scaleY(1.05) scaleX(0.95) translateX(-1px); }
+  100% { transform: scaleY(0.95) scaleX(1.05) translateX(2px); }
+}
+
+@keyframes ember-glow {
+  from { opacity: 0.6; transform: scaleX(0.9); }
+  to { opacity: 1; transform: scaleX(1.1); }
+}
+
+/* Grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* House Points */
+.points-display {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: var(--gold-bright);
+  text-align: center;
+  text-shadow: 0 0 20px var(--amber-glow);
+}
+
+.points-bar-container {
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+  height: 24px;
+  margin: 15px 0;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+}
+
+.points-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--gold-bright));
+  border-radius: 20px;
+  transition: width 0.8s ease;
+  box-shadow: 0 0 10px var(--amber-glow);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 4px;
+  border: 1px solid var(--border-gold);
+  background: rgba(212,168,83,0.1);
+  color: var(--gold);
+}
+
+.badge.earned {
+  background: linear-gradient(135deg, var(--burgundy), var(--burgundy-light));
+  border-color: var(--gold);
+  box-shadow: 0 0 8px var(--amber-glow);
+}
+
+.badge.locked {
+  opacity: 0.4;
+  filter: grayscale(0.8);
+}
+
+/* List items */
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(212,168,83,0.08);
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.list-item:hover {
+  background: rgba(212,168,83,0.05);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item input[type="checkbox"] {
+  appearance: none;
+  width: 20px; height: 20px;
+  border: 2px solid var(--gold-dim);
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.list-item input[type="checkbox"]:checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.list-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--bg-dark);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.list-item .item-text {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.list-item .item-text.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.list-item .item-delete {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  padding: 4px;
+}
+
+.list-item:hover .item-delete {
+  opacity: 1;
+}
+
+.list-item .item-delete:hover {
+  color: #e74c3c;
+}
+
+/* Add item input */
+.add-item-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.add-item-row input, .add-item-row textarea {
+  flex: 1;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.add-item-row input:focus, .add-item-row textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 8px var(--amber-glow);
+}
+
+.add-item-row input::placeholder, .add-item-row textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--burgundy), var(--burgundy-light));
+  color: var(--parchment);
+  border: 1px solid var(--gold-dim);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, var(--burgundy-light), #9b4050);
+  box-shadow: 0 0 12px var(--amber-glow);
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+  color: var(--bg-dark);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+}
+
+/* Quote card */
+.quote-card {
+  font-style: italic;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  padding: 20px;
+  border-left: 3px solid var(--gold-dim);
+  margin: 10px 0;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+/* Medicine schedule */
+.med-item {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(212,168,83,0.08);
+}
+
+.med-name {
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 1.05rem;
+}
+
+.med-schedule {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Plant cards */
+.plant-card {
+  background: linear-gradient(135deg, rgba(45,74,46,0.3), var(--bg-card));
+  border: 1px solid rgba(61,106,62,0.4);
+}
+
+.plant-status {
+  font-size: 0.85rem;
+  color: var(--forest-light);
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: rgba(45,74,46,0.2);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Notes area */
+.notes-textarea {
+  width: 100%;
+  min-height: 150px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 16px;
+  color: var(--text-primary);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 10px var(--amber-glow);
+}
+
+/* Goal items */
+.goal-item {
+  padding: 16px;
+  border-bottom: 1px solid rgba(212,168,83,0.08);
+}
+
+.goal-title {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.goal-progress-bar {
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212,168,83,0.1);
+}
+
+.goal-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--forest), var(--gold));
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.goal-progress-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Summary widgets */
+.widget {
+  text-align: center;
+  padding: 20px;
+}
+
+.widget-number {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--gold-bright);
+  text-shadow: 0 0 10px var(--amber-glow);
+}
+
+.widget-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+/* Daily Quest editable */
+.daily-quest-text {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.daily-quest-text:hover {
+  background: rgba(212,168,83,0.08);
+}
+
+.daily-quest-input {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 10px;
+  color: var(--text-primary);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+}
+
+.daily-quest-input:focus { outline: none; }
+
+/* Section header */
+.section-header {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px var(--amber-glow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Reminder item */
+.reminder-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(212,168,83,0.08);
+}
+
+.reminder-time {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 0.9rem;
+  min-width: 50px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: var(--sidebar-width);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 70px 20px 30px;
+  }
+
+  .welcome-greeting {
+    font-size: 1.8rem;
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Overlay for mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 99;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+/* Tab for notes sections */
+.note-entry {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(212,168,83,0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.note-entry-title {
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.note-entry-content {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.note-entry-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.note-entry .item-delete {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.note-entry:hover .item-delete {
+  opacity: 1;
+}
+
+.note-entry:hover .item-delete:hover {
+  color: #e74c3c;
+}
+
+/* Points history */
+.points-log {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.points-log-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(212,168,83,0.05);
+}
+
+.points-log-item .pts {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--bg-card), #3a2218);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 22px;
+  color: var(--gold-bright);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(212,168,83,0.3);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ====== WEATHER WIDGET ====== */
+.weather-widget {
+  background: linear-gradient(135deg, #3a2510 0%, #2a1a0e 40%, #1f1208 100%);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(212,168,83,0.2), inset 0 1px 0 rgba(244,228,193,0.08);
+}
+
+.weather-widget::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-bright), var(--gold), transparent);
+}
+
+.weather-widget::after {
+  content: '';
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(232,168,50,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.weather-location {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weather-updated {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.weather-icon {
+  font-size: 3rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(232,168,50,0.3));
+}
+
+.weather-temp {
+  font-family: 'Cinzel', serif;
+  font-size: 2.8rem;
+  color: var(--parchment);
+  text-shadow: 0 0 12px rgba(244,228,193,0.2);
+  line-height: 1;
+}
+
+.weather-condition {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.weather-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212,168,83,0.12);
+}
+
+.weather-detail-item {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-detail-item span {
+  color: var(--parchment);
+  font-weight: 500;
+}
+
+.weather-tip {
+  background: rgba(212,168,83,0.08);
+  border: 1px solid rgba(212,168,83,0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-tip-icon {
+  font-size: 1.2rem;
+}
+
+.weather-loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.weather-loading .spinner {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 2px solid var(--gold-dim);
+  border-top-color: var(--gold-bright);
+  border-radius: 50%;
+  animation: weather-spin 0.8s linear infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes weather-spin {
+  to { transform: rotate(360deg); }
+}
+
+.weather-error {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .weather-main {
+    gap: 14px;
+  }
+  .weather-temp {
+    font-size: 2.2rem;
+  }
+  .weather-icon {
+    font-size: 2.4rem;
+  }
+  .weather-details {
+    gap: 12px;
+  }
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles-canvas" width="1280" height="619"></canvas>
+
+<button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>✨ Sihirli Dünya</h2>
+    <div class="subtitle">Merve'nin İkinci Beyni</div>
+  </div>
+  <div class="nav-item active" data-section="home" onclick="navigateTo(&#39;home&#39;)">
+    <span class="nav-icon">🏠</span><span class="nav-text">Ana Sayfa</span>
+  </div>
+  <div class="nav-item" data-section="daily-prophet" onclick="navigateTo(&#39;daily-prophet&#39;)">
+    <span class="nav-icon">🦉</span><span class="nav-text">Daily Prophet</span>
+  </div>
+  <div class="nav-item" data-section="shopping" onclick="navigateTo(&#39;shopping&#39;)">
+    <span class="nav-icon">🛒</span><span class="nav-text">Hogsmeade Market</span>
+  </div>
+  <div class="nav-item" data-section="potions" onclick="navigateTo(&#39;potions&#39;)">
+    <span class="nav-icon">💊</span><span class="nav-text">Potions (İlaçlar)</span>
+  </div>
+  <div class="nav-item" data-section="book-ideas" onclick="navigateTo(&#39;book-ideas&#39;)">
+    <span class="nav-icon">📖</span><span class="nav-text">Book of Ideas</span>
+  </div>
+  <div class="nav-item" data-section="spellbook" onclick="navigateTo(&#39;spellbook&#39;)">
+    <span class="nav-icon">🪄</span><span class="nav-text">Spellbook (YZ/Yazılım)</span>
+  </div>
+  <div class="nav-item" data-section="goals" onclick="navigateTo(&#39;goals&#39;)">
+    <span class="nav-icon">🗺️</span><span class="nav-text">Marauder's Map</span>
+  </div>
+  <div class="nav-item" data-section="plants" onclick="navigateTo(&#39;plants&#39;)">
+    <span class="nav-icon">🌱</span><span class="nav-text">Herbology (Bitkiler)</span>
+  </div>
+  <div class="nav-item" data-section="recipes" onclick="navigateTo(&#39;recipes&#39;)">
+    <span class="nav-icon">🍳</span><span class="nav-text">Great Hall (Tarifler)</span>
+  </div>
+  <div class="nav-item" data-section="notes" onclick="navigateTo(&#39;notes&#39;)">
+    <span class="nav-icon">✨</span><span class="nav-text">Akıl Defteri</span>
+  </div>
+  <div class="nav-item" data-section="dreams" onclick="navigateTo(&#39;dreams&#39;)">
+    <span class="nav-icon">💤</span><span class="nav-text">Düşünseli (Rüyalar)</span>
+  </div>
+  <div class="nav-item" data-section="reminders" onclick="navigateTo(&#39;reminders&#39;)">
+    <span class="nav-icon">⏰</span><span class="nav-text">Hatırlatıcılar</span>
+  </div>
+  <div class="nav-item" data-section="house-points" onclick="navigateTo(&#39;house-points&#39;)">
+    <span class="nav-icon">🏆</span><span class="nav-text">House Points</span>
+  </div>
+</nav>
+
+<main class="main-content">
+
+  <!-- HOME -->
+  <div class="section-page active" id="section-home">
+    <div class="welcome-greeting">Hoşgeldin, Merve ✨</div>
+    <div class="welcome-sub">Bugün ne var ne yok? Birlikte neler inşa edebiliriz?</div>
+    <div class="welcome-date" id="today-date">19 Temmuz 2026, Pazar</div>
+
+    <!-- WEATHER WIDGET -->
+    <div class="weather-widget" id="weather-widget">
+      <div class="weather-loading" id="weather-loading" style="display: none;">
+        <span class="spinner"></span>Hava durumu yükleniyor...
+      </div>
+      <div id="weather-content" style="display: block;">
+        <div class="weather-header">
+          <div class="weather-location">📍 Beşiktaş / Abbasağa</div>
+          <div class="weather-updated">Son güncelleme: 23:39</div>
+        </div>
+        <div class="weather-main">
+          <div class="weather-icon">⛅</div>
+          <div>
+            <div class="weather-temp">24°C</div>
+            <div class="weather-condition">Parçalı bulutlu</div>
+          </div>
+        </div>
+        <div class="weather-details">
+          
+        <div class="weather-detail-item">💨 Rüzgar: <span>6.9 km/s</span></div>
+      
+        </div>
+        <div class="weather-tip">
+          <span class="weather-tip-icon">🌸</span>
+          <span>Hava harika! Dışarıda biraz yürüyüş yap.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fireplace-container">
+      <div class="fire">
+        <div class="flame flame-main"></div>
+        <div class="flame flame-left"></div>
+        <div class="flame flame-right"></div>
+        <div class="flame flame-small1"></div>
+        <div class="flame flame-small2"></div>
+        <div class="embers"></div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 25px;">
+      <div class="card widget">
+        <div class="widget-number" id="home-points">0</div>
+        <div class="widget-label">🏆 House Points</div>
+      </div>
+      <div class="card widget">
+        <div class="widget-number" id="home-shopping-count">3</div>
+        <div class="widget-label">🛒 Alışveriş Listesi</div>
+      </div>
+      <div class="card widget">
+        <div class="widget-number" id="home-reminders-count">0</div>
+        <div class="widget-label">⏰ Bekleyen Hatırlatıcılar</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚡ Günün Görevi (Daily Quest)</div>
+      <div id="daily-quest-display">
+    <div class="daily-quest-text" onclick="editDailyQuest()">🌱 Tüm bitkileri kontrol et, toprak havalandır, gerekenleri yeniden toprakla, sağlıklarına kavuştur.</div>
+    <div style="margin-top:12px;">
+      <button class="btn btn-sm btn-gold" onclick="completeDailyQuest()">✅ Görevi Tamamla (+50 puan)</button>
+    </div>
+  </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📜 Sihirli Söz</div>
+      <div class="quote-card" id="daily-quote"><span style="font-style:italic;color:var(--gold);font-size:1.15rem;line-height:1.7;">"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."</span><span class="quote-source" style="color:var(--text-secondary);font-size:0.9rem;margin-top:10px;letter-spacing:0.02em;">— Albus Dumbledore, Harry Potter and the Deathly Hallows</span></div>
+    </div>
+  </div>
+
+  <!-- DAILY PROPHET -->
+  <div class="section-page" id="section-daily-prophet">
+    <div class="section-header">🦉 Daily Prophet (Gündem)</div>
+    <p style="color: var(--text-secondary); margin-bottom: 20px;">Günlük notların, düşüncelerin, gündemin...</p>
+    <div id="daily-prophet-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="prophet-title-input" placeholder="Başlık...">
+        <textarea id="prophet-content-input" placeholder="Bugün ne oldu?" rows="3" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addProphetEntry()">✍️ Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOPPING -->
+  <div class="section-page" id="section-shopping">
+    <div class="section-header">🛒 Hogsmeade Market (Alışveriş)</div>
+    <div class="card">
+      <div id="shopping-list"></div>
+      <div class="add-item-row">
+        <input type="text" id="shopping-input" placeholder="Yeni ürün ekle..." onkeypress="if(event.key===&#39;Enter&#39;)addShoppingItem()">
+        <button class="btn" onclick="addShoppingItem()">+ Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POTIONS -->
+  <div class="section-page" id="section-potions">
+    <div class="section-header">💊 Potions (İlaçlar)</div>
+    <div class="card">
+      <div id="potions-list"></div>
+      <div class="add-item-row" style="flex-direction:column; gap:10px; margin-top:15px;">
+        <input type="text" id="potion-name-input" placeholder="İlaç adı...">
+        <input type="text" id="potion-schedule-input" placeholder="Kullanım şekli (ör: Günde 2 kez)...">
+        <button class="btn" onclick="addPotion()">+ İlaç Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK IDEAS -->
+  <div class="section-page" id="section-book-ideas">
+    <div class="section-header">📖 Book of Ideas (Çocuk Kitabı)</div>
+    <p style="color: var(--text-secondary); margin-bottom: 20px;">Çocuk kitabı projesi için fikirler, karakterler, sahneler...</p>
+    <div id="book-ideas-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="book-idea-title" placeholder="Fikir başlığı (karakter, sahne, tema...)">
+        <textarea id="book-idea-content" placeholder="Detaylar..." rows="3" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addBookIdea()">📖 Fikir Ekle (+15 puan)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPELLBOOK -->
+  <div class="section-page" id="section-spellbook">
+    <div class="section-header">🪄 Spellbook (YZ &amp; Yazılım Notları)</div>
+    <p style="color: var(--text-secondary); margin-bottom: 20px;">Yapay zeka ve yazılım öğrenme notların...</p>
+    <div id="spellbook-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="spell-title" placeholder="Konu başlığı...">
+        <textarea id="spell-content" placeholder="Öğrendiğin şey, not, kod parçası..." rows="4" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addSpell()">🪄 Not Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GOALS -->
+  <div class="section-page" id="section-goals">
+    <div class="section-header">🗺️ Marauder's Map (Hedefler)</div>
+    <div class="card">
+      <div id="goals-list"></div>
+      <div class="add-item-row" style="flex-direction:column; gap:10px; margin-top:15px;">
+        <input type="text" id="goal-input" placeholder="Yeni hedef ekle...">
+        <button class="btn" onclick="addGoal()">🗺️ Hedef Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLANTS -->
+  <div class="section-page" id="section-plants">
+    <div class="section-header">🌱 Herbology (Bitkiler)</div>
+    <p style="color:var(--text-secondary);margin-bottom:8px;">🏡 Balkon: Sabah güneşi alıyor, öğlene çekiliyor.</p>
+    <div class="grid-2" id="plants-grid"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="plant-name" placeholder="Bitki adı ve adet...">
+        <textarea id="plant-care" placeholder="Bakım notları..." rows="2" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addPlant()">🌱 Bitki Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECIPES -->
+  <div class="section-page" id="section-recipes">
+    <div class="section-header">🍳 Great Hall (Tarifler)</div>
+    <div id="recipes-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="recipe-title" placeholder="Tarif adı...">
+        <textarea id="recipe-content" placeholder="Tarif detayları..." rows="4" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addRecipe()">🍳 Tarif Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section-page" id="section-notes">
+    <div class="section-header">✨ Akıl Defteri (Serbest Notlar)</div>
+    <div id="notes-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="note-title" placeholder="Not başlığı (opsiyonel)...">
+        <textarea id="note-content" placeholder="Aklına ne gelirse..." rows="4" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addNote()">✨ Not Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DREAMS -->
+  <div class="section-page" id="section-dreams">
+    <div class="section-header">💤 Düşünseli (Rüya Notları)</div>
+    <p style="color: var(--text-secondary); margin-bottom: 20px;">Rüyalarını kaydet, düşüncelerini topla...</p>
+    <div id="dreams-entries"></div>
+    <div class="card" style="margin-top:15px;">
+      <div class="add-item-row" style="flex-direction:column; gap:10px;">
+        <input type="text" id="dream-title" placeholder="Rüya başlığı veya tarihi...">
+        <textarea id="dream-content" placeholder="Rüyanda ne gördün?" rows="4" style="width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border-gold);border-radius:8px;padding:10px 14px;color:var(--text-primary);font-family:&#39;EB Garamond&#39;,serif;font-size:1rem;resize:vertical;"></textarea>
+        <button class="btn" onclick="addDream()">💤 Rüya Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REMINDERS -->
+  <div class="section-page" id="section-reminders">
+    <div class="section-header">⏰ Hatırlatıcılar</div>
+    <div class="card">
+      <div id="reminders-list"></div>
+      <div class="add-item-row" style="flex-direction:column; gap:10px; margin-top:15px;">
+        <input type="text" id="reminder-text-input" placeholder="Hatırlatıcı...">
+        <input type="text" id="reminder-time-input" placeholder="Zaman (ör: Yarın 14:00, Pazartesi sabah...)">
+        <button class="btn" onclick="addReminder()">⏰ Hatırlatıcı Ekle (+10 puan)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOUSE POINTS -->
+  <div class="section-page" id="section-house-points">
+    <div class="section-header">🏆 House Points</div>
+    <div class="card" style="text-align:center;">
+      <div class="points-display" id="total-points">0</div>
+      <div style="color:var(--text-secondary);margin-top:5px;">Toplam Puan</div>
+      <div class="points-bar-container">
+        <div class="points-bar" id="points-bar" style="width:0%"></div>
+      </div>
+      <div style="color:var(--text-muted);font-size:0.85rem;" id="next-milestone-text">Sonraki rozet: 100 puan</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎖️ Rozetler</div>
+      <div id="badges-container"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📊 Puan Geçmişi</div>
+      <div class="points-log" id="points-log"></div>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <button class="btn" onclick="resetWeeklyPoints()" style="margin:5px;">🔄 Haftalık Sıfırla</button>
+      <button class="btn btn-gold" onclick="addManualPoints()" style="margin:5px;">+ Manuel Puan Ekle</button>
+    </div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ====== DATA MANAGEMENT ======
+const STORAGE_KEY = 'merve_dashboard_v3';
+
+const DEFAULT_DATA = {
+  points: 0,
+  pointsLog: [],
+  dailyQuest: '🌱 Tüm bitkileri kontrol et, toprak havalandır, gerekenleri yeniden toprakla, sağlıklarına kavuştur.',
+  shopping: [
+    { id: 1, text: 'Yoğurt', checked: false },
+    { id: 2, text: 'Soğuk su (1,5 lt)', checked: false },
+    { id: 3, text: 'Süt x2', checked: false }
+  ],
+  potions: [
+    { id: 1, name: 'Campral', schedule: 'Günde 3 kez, ~5 saat arayla (ilk doz uyanınca)' },
+    { id: 2, name: 'Duxet 60 mg', schedule: 'Günde 1 kez' },
+    { id: 3, name: 'Ketya 25mg', schedule: 'Gece yatarken' },
+    { id: 4, name: 'Benexol', schedule: 'Günde 2 kez (sabah/gece)' },
+    { id: 5, name: 'NewWell Magnezyum', schedule: 'Sabah ve gece' },
+    { id: 6, name: 'İnositol', schedule: 'Sabah ve gece' },
+    { id: 7, name: 'Devit (D vitamini)', schedule: 'Sabah aç karnına' }
+  ],
+  plants: [
+    { id: 1, name: 'Euphorbia (6 adet)', care: 'Henüz dikilmedi. Torf+perlit, öğle güneşinden koru, toprak kuruyunca sula.' },
+    { id: 2, name: 'Yaprak Güzeli / Coleus (1 adet)', care: 'Suda köklendiriliyor, köklenince saksıya.' },
+    { id: 3, name: 'Krizantem (1 adet)', care: 'Budandı, yeniden canlandırılacak. Düzenli sulama.' },
+    { id: 4, name: 'Kalanşo (4 adet)', care: 'Solmaya başladı, saksı+toprak yenilenecek. Sukulent, az sula.' }
+  ],
+  goals: [
+    { id: 1, title: 'Alkolsüz yaşamı kalıcı hale getirmek', progress: 0 },
+    { id: 2, title: 'Nöropatiyi iyileştirmek', progress: 0 },
+    { id: 3, title: 'Sağlıklı kilo vermek', progress: 0 },
+    { id: 4, title: 'Yapay zeka ve yazılım öğrenmek', progress: 0 },
+    { id: 5, title: 'Kendi uygulamasını geliştirmek', progress: 0 },
+    { id: 6, title: 'Çocuk kitabını yazmak', progress: 0 }
+  ],
+  recipes: [
+    { id: 1, title: 'Ev Yapımı Meyveli Soğuk Çay', content: 'Demlenmiş çay soğutulur, taze meyve (limon/portakal/şeftali), bal/şeker, nane eklenir, birkaç saat buzdolabında beklenir.', date: '2026-07-16' }
+  ],
+  bookIdeas: [],
+  spellbook: [],
+  notes: [],
+  dreams: [],
+  reminders: [],
+  prophetEntries: [],
+  lastResetDate: null
+};
+
+function loadData() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return { ...DEFAULT_DATA, ...parsed };
+    }
+  } catch(e) {}
+  return { ...DEFAULT_DATA };
+}
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+let data = loadData();
+
+// ====== NAVIGATION ======
+function navigateTo(section) {
+  document.querySelectorAll('.section-page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  
+  const target = document.getElementById('section-' + section);
+  if (target) target.classList.add('active');
+  
+  const navItem = document.querySelector(`.nav-item[data-section="${section}"]`);
+  if (navItem) navItem.classList.add('active');
+
+  // Close mobile sidebar
+  document.getElementById('sidebar').classList.remove('open');
+  document.querySelector('.sidebar-overlay').classList.remove('active');
+
+  renderSection(section);
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('active');
+}
+
+// ====== RENDERING ======
+function renderSection(section) {
+  switch(section) {
+    case 'home': renderHome(); break;
+    case 'shopping': renderShopping(); break;
+    case 'potions': renderPotions(); break;
+    case 'goals': renderGoals(); break;
+    case 'plants': renderPlants(); break;
+    case 'recipes': renderEntries('recipes', 'recipes-entries'); break;
+    case 'book-ideas': renderEntries('bookIdeas', 'book-ideas-entries'); break;
+    case 'spellbook': renderEntries('spellbook', 'spellbook-entries'); break;
+    case 'notes': renderEntries('notes', 'notes-entries'); break;
+    case 'dreams': renderEntries('dreams', 'dreams-entries'); break;
+    case 'reminders': renderReminders(); break;
+    case 'house-points': renderHousePoints(); break;
+    case 'daily-prophet': renderEntries('prophetEntries', 'daily-prophet-entries'); break;
+  }
+}
+
+function renderHome() {
+  // Date
+  const now = new Date();
+  const days = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+  const months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  document.getElementById('today-date').textContent = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}, ${days[now.getDay()]}`;
+
+  // Widgets
+  document.getElementById('home-points').textContent = data.points;
+  const uncheckedShopping = data.shopping.filter(i => !i.checked).length;
+  document.getElementById('home-shopping-count').textContent = uncheckedShopping;
+  const pendingReminders = data.reminders.filter(r => !r.done).length;
+  document.getElementById('home-reminders-count').textContent = pendingReminders;
+
+  // Daily Quest
+  renderDailyQuest();
+
+  // Quote
+  renderQuote();
+
+  // Weather
+  fetchWeather();
+}
+
+function renderDailyQuest() {
+  const container = document.getElementById('daily-quest-display');
+  container.innerHTML = `
+    <div class="daily-quest-text" onclick="editDailyQuest()">${data.dailyQuest || 'Henüz görev belirlenmedi. Tıkla ve yaz!'}</div>
+    <div style="margin-top:12px;">
+      <button class="btn btn-sm btn-gold" onclick="completeDailyQuest()">✅ Görevi Tamamla (+50 puan)</button>
+    </div>
+  `;
+}
+
+function editDailyQuest() {
+  const container = document.getElementById('daily-quest-display');
+  container.innerHTML = `
+    <input class="daily-quest-input" id="quest-edit-input" value="${data.dailyQuest}" 
+      onkeypress="if(event.key==='Enter')saveDailyQuest()" onblur="saveDailyQuest()">
+  `;
+  document.getElementById('quest-edit-input').focus();
+}
+
+function saveDailyQuest() {
+  const input = document.getElementById('quest-edit-input');
+  if (input) {
+    data.dailyQuest = input.value;
+    saveData();
+    renderDailyQuest();
+  }
+}
+
+function completeDailyQuest() {
+  addPoints(50, 'Günlük görev tamamlandı!');
+  data.dailyQuest = '';
+  saveData();
+  renderDailyQuest();
+  showToast('🎉 Günlük görev tamamlandı! +50 puan');
+}
+
+const QUOTES = [
+  // J.R.R. Tolkien
+  { text: '"Not all those who wander are lost."', source: '— J.R.R. Tolkien, The Fellowship of the Ring' },
+  { text: '"All we have to decide is what to do with the time that is given us."', source: '— J.R.R. Tolkien, The Fellowship of the Ring' },
+  { text: '"Even the smallest person can change the course of the future."', source: '— J.R.R. Tolkien, The Two Towers' },
+  // Lewis Carroll — özel (tez konusu)
+  { text: '"We\'re all mad here."', source: '— Cheshire Cat, Alice\'s Adventures in Wonderland · Lewis Carroll' },
+  { text: '"It\'s no use going back to yesterday, because I was a different person then."', source: '— Lewis Carroll, Alice\'s Adventures in Wonderland' },
+  { text: '"Why, sometimes I\'ve believed as many as six impossible things before breakfast."', source: '— Lewis Carroll, Through the Looking-Glass' },
+  { text: '"Dünle dönerek zaman kaybetmek yersizdir; zira dün ben bambaşka biriyim."', source: '— Lewis Carroll, Alice Harikalar Diyarında' },
+  { text: '"Curiouser and curiouser!"', source: '— Lewis Carroll, Alice\'s Adventures in Wonderland' },
+  // J.K. Rowling / Harry Potter
+  { text: '"Happiness can be found even in the darkest of times, if one only remembers to turn on the light."', source: '— Albus Dumbledore, Harry Potter and the Prisoner of Azkaban' },
+  { text: '"It does not do to dwell on dreams and forget to live."', source: '— Albus Dumbledore, Harry Potter and the Philosopher\'s Stone' },
+  { text: '"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."', source: '— Albus Dumbledore, Harry Potter and the Deathly Hallows' },
+  // Edgar Allan Poe
+  { text: '"Those who dream by day are cognizant of many things which escape those who dream only by night."', source: '— Edgar Allan Poe, Eleonora' },
+  { text: '"I became insane, with long intervals of horrible sanity."', source: '— Edgar Allan Poe' },
+  // H.P. Lovecraft
+  { text: '"The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown."', source: '— H.P. Lovecraft, Supernatural Horror in Literature' },
+  { text: '"That is not dead which can eternal lie, and with strange aeons even death may die."', source: '— H.P. Lovecraft, The Call of Cthulhu' },
+  // Guillermo del Toro
+  { text: '"Monsters are the patron saints of imperfection."', source: '— Guillermo del Toro' },
+  { text: '"In fairy tales, monsters exist to be a manifestation of something that was always there."', source: '— Guillermo del Toro' },
+  // Oscar Wilde
+  { text: '"Be yourself; everyone else is already taken."', source: '— Oscar Wilde' },
+  { text: '"The books that the world calls immoral are books that show the world its own shame."', source: '— Oscar Wilde, The Picture of Dorian Gray' },
+  // Neil Gaiman
+  { text: '"Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten."', source: '— Neil Gaiman, Coraline' },
+  { text: '"You get what anybody gets — you get a lifetime."', source: '— Neil Gaiman, The Sandman' }
+];
+
+function renderQuote() {
+  const q = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+  document.getElementById('daily-quote').innerHTML =
+    `<span style="font-style:italic;color:var(--gold);font-size:1.15rem;line-height:1.7;">${q.text}</span>` +
+    `<span class="quote-source" style="color:var(--text-secondary);font-size:0.9rem;margin-top:10px;letter-spacing:0.02em;">${q.source}</span>`;
+}
+
+// ====== WEATHER ======
+function getWeatherCondition(code) {
+  if (code === 0) return { text: 'Açık', icon: '☀️' };
+  if (code >= 1 && code <= 3) return { text: 'Parçalı bulutlu', icon: '⛅' };
+  if (code >= 45 && code <= 48) return { text: 'Sisli', icon: '🌫️' };
+  if (code >= 51 && code <= 57) return { text: 'Çisenti', icon: '🌦️' };
+  if (code >= 61 && code <= 67) return { text: 'Yağmurlu', icon: '🌧️' };
+  if (code >= 71 && code <= 77) return { text: 'Karlı', icon: '🌨️' };
+  if (code >= 80 && code <= 82) return { text: 'Sağanak yağış', icon: '⛈️' };
+  if (code >= 95 && code <= 99) return { text: 'Fırtınalı', icon: '🌩️' };
+  return { text: 'Bilinmiyor', icon: '🌡️' };
+}
+
+function getWeatherTip(code, temp, precipitation, windspeed) {
+  if (code >= 51 && code <= 99 && precipitation > 0) {
+    return { icon: '☂️', text: 'Şemsiyeni al!' };
+  }
+  if (code >= 95) {
+    return { icon: '⚠️', text: 'Dışarı çıkma, fırtına var!' };
+  }
+  if (code >= 71 && code <= 77) {
+    return { icon: '🧣', text: 'Kalın giyin, kar var!' };
+  }
+  if (windspeed > 40) {
+    return { icon: '💨', text: 'Rüzgar çok sert, dikkatli ol!' };
+  }
+  if (code === 0 && temp >= 30) {
+    return { icon: '🧴', text: 'Güneş kremi unutma! Bol su iç.' };
+  }
+  if (code === 0 && temp >= 25) {
+    return { icon: '😎', text: 'Güzel bir gün! Güneş gözlüğünü tak.' };
+  }
+  if (temp <= 5) {
+    return { icon: '🧥', text: 'Sıkı giyin, soğuk var!' };
+  }
+  if (code >= 45 && code <= 48) {
+    return { icon: '👁️', text: 'Sis var, görüş mesafesine dikkat!' };
+  }
+  if (temp >= 20 && temp < 25 && code <= 3) {
+    return { icon: '🌸', text: 'Hava harika! Dışarıda biraz yürüyüş yap.' };
+  }
+  return { icon: '✨', text: 'Güzel bir gün, keyfine bak!' };
+}
+
+function fetchWeather() {
+  const loadingEl = document.getElementById('weather-loading');
+  const contentEl = document.getElementById('weather-content');
+  
+  loadingEl.style.display = 'block';
+  contentEl.style.display = 'none';
+
+  const url = 'https://api.open-meteo.com/v1/forecast?latitude=41.0433&longitude=29.0054&current=temperature_2m,weathercode,precipitation,windspeed_10m&timezone=Europe%2FIstanbul';
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error('Hava durumu yüklenemedi');
+      return response.json();
+    })
+    .then(weatherData => {
+      const current = weatherData.current;
+      const temp = Math.round(current.temperature_2m);
+      const code = current.weathercode;
+      const precipitation = current.precipitation;
+      const windspeed = current.windspeed_10m;
+
+      const condition = getWeatherCondition(code);
+      const tip = getWeatherTip(code, temp, precipitation, windspeed);
+
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+
+      let detailsHtml = `
+        <div class="weather-detail-item">💨 Rüzgar: <span>${windspeed} km/s</span></div>
+      `;
+      if (precipitation > 0) {
+        detailsHtml += `<div class="weather-detail-item">🌧️ Yağış: <span>${precipitation} mm</span></div>`;
+      }
+
+      contentEl.innerHTML = `
+        <div class="weather-header">
+          <div class="weather-location">📍 Beşiktaş / Abbasağa</div>
+          <div class="weather-updated">Son güncelleme: ${timeStr}</div>
+        </div>
+        <div class="weather-main">
+          <div class="weather-icon">${condition.icon}</div>
+          <div>
+            <div class="weather-temp">${temp}°C</div>
+            <div class="weather-condition">${condition.text}</div>
+          </div>
+        </div>
+        <div class="weather-details">
+          ${detailsHtml}
+        </div>
+        <div class="weather-tip">
+          <span class="weather-tip-icon">${tip.icon}</span>
+          <span>${tip.text}</span>
+        </div>
+      `;
+
+      loadingEl.style.display = 'none';
+      contentEl.style.display = 'block';
+    })
+    .catch(err => {
+      loadingEl.style.display = 'none';
+      contentEl.style.display = 'block';
+      contentEl.innerHTML = `<div class="weather-error">⚠️ Hava durumu yüklenemedi. İnternet bağlantını kontrol et.</div>`;
+    });
+}
+
+// ====== SHOPPING ======
+function renderShopping() {
+  const container = document.getElementById('shopping-list');
+  container.innerHTML = data.shopping.map(item => `
+    <div class="list-item">
+      <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="toggleShoppingItem(${item.id})">
+      <span class="item-text ${item.checked ? 'checked' : ''}">${item.text}</span>
+      <button class="item-delete" onclick="deleteShoppingItem(${item.id})">✕</button>
+    </div>
+  `).join('');
+}
+
+function addShoppingItem() {
+  const input = document.getElementById('shopping-input');
+  const text = input.value.trim();
+  if (!text) return;
+  data.shopping.push({ id: Date.now(), text, checked: false });
+  input.value = '';
+  saveData();
+  renderShopping();
+  updateHomeWidgets();
+}
+
+function toggleShoppingItem(id) {
+  const item = data.shopping.find(i => i.id === id);
+  if (item) {
+    item.checked = !item.checked;
+    if (item.checked) {
+      addPoints(5, `Alışveriş: ${item.text}`);
+      showToast(`✓ ${item.text} tamamlandı! +5 puan`);
+    }
+    saveData();
+    renderShopping();
+    updateHomeWidgets();
+  }
+}
+
+function deleteShoppingItem(id) {
+  data.shopping = data.shopping.filter(i => i.id !== id);
+  saveData();
+  renderShopping();
+  updateHomeWidgets();
+}
+
+// ====== POTIONS ======
+function renderPotions() {
+  const container = document.getElementById('potions-list');
+  container.innerHTML = data.potions.map(p => `
+    <div class="med-item">
+      <div class="med-name">💊 ${p.name}</div>
+      <div class="med-schedule">${p.schedule}</div>
+      <button class="item-delete" style="opacity:1;float:right;margin-top:-30px;" onclick="deletePotion(${p.id})">✕</button>
+    </div>
+  `).join('');
+}
+
+function addPotion() {
+  const name = document.getElementById('potion-name-input').value.trim();
+  const schedule = document.getElementById('potion-schedule-input').value.trim();
+  if (!name) return;
+  data.potions.push({ id: Date.now(), name, schedule: schedule || 'Belirtilmedi' });
+  document.getElementById('potion-name-input').value = '';
+  document.getElementById('potion-schedule-input').value = '';
+  saveData();
+  renderPotions();
+}
+
+function deletePotion(id) {
+  data.potions = data.potions.filter(p => p.id !== id);
+  saveData();
+  renderPotions();
+}
+
+// ====== GOALS ======
+function renderGoals() {
+  const container = document.getElementById('goals-list');
+  container.innerHTML = data.goals.map(g => `
+    <div class="goal-item">
+      <div class="goal-title">🗺️ ${g.title}</div>
+      <div class="goal-progress-bar">
+        <div class="goal-progress-fill" style="width:${g.progress}%"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;">
+        <div class="goal-progress-text">%${g.progress}</div>
+        <div>
+          <button class="btn btn-sm" onclick="updateGoalProgress(${g.id}, -10)" style="padding:4px 8px;">−</button>
+          <button class="btn btn-sm btn-gold" onclick="updateGoalProgress(${g.id}, 10)" style="padding:4px 8px;">+</button>
+          <button class="item-delete" style="opacity:1;" onclick="deleteGoal(${g.id})">✕</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateGoalProgress(id, delta) {
+  const goal = data.goals.find(g => g.id === id);
+  if (goal) {
+    const oldProg = goal.progress;
+    goal.progress = Math.max(0, Math.min(100, goal.progress + delta));
+    if (delta > 0 && goal.progress > oldProg) {
+      addPoints(25, `Hedef ilerleme: ${goal.title}`);
+      showToast(`🗺️ İlerleme! +25 puan`);
+    }
+    saveData();
+    renderGoals();
+  }
+}
+
+function addGoal() {
+  const input = document.getElementById('goal-input');
+  const title = input.value.trim();
+  if (!title) return;
+  data.goals.push({ id: Date.now(), title, progress: 0 });
+  input.value = '';
+  saveData();
+  renderGoals();
+}
+
+function deleteGoal(id) {
+  data.goals = data.goals.filter(g => g.id !== id);
+  saveData();
+  renderGoals();
+}
+
+// ====== PLANTS ======
+function renderPlants() {
+  const container = document.getElementById('plants-grid');
+  container.innerHTML = data.plants.map(p => `
+    <div class="card plant-card">
+      <div class="card-title" style="font-size:1rem;">🌱 ${p.name}</div>
+      <div class="plant-status">${p.care}</div>
+      <button class="item-delete" style="opacity:1;margin-top:8px;" onclick="deletePlant(${p.id})">✕ Kaldır</button>
+    </div>
+  `).join('');
+}
+
+function addPlant() {
+  const name = document.getElementById('plant-name').value.trim();
+  const care = document.getElementById('plant-care').value.trim();
+  if (!name) return;
+  data.plants.push({ id: Date.now(), name, care: care || 'Bakım notu yok' });
+  document.getElementById('plant-name').value = '';
+  document.getElementById('plant-care').value = '';
+  saveData();
+  renderPlants();
+}
+
+function deletePlant(id) {
+  data.plants = data.plants.filter(p => p.id !== id);
+  saveData();
+  renderPlants();
+}
+
+// ====== GENERIC ENTRIES (notes, dreams, spellbook, bookIdeas, recipes, prophet) ======
+function renderEntries(dataKey, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const entries = data[dataKey] || [];
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="card" style="text-align:center;color:var(--text-muted);font-style:italic;">Henüz bir şey yok. İlk notunu ekle! ✨</div>';
+    return;
+  }
+  container.innerHTML = entries.slice().reverse().map(e => `
+    <div class="note-entry">
+      ${e.title ? `<div class="note-entry-title">${e.title}</div>` : ''}
+      <div class="note-entry-content">${e.content.replace(/\n/g, '<br>')}</div>
+      <div class="note-entry-date">${e.date || ''}</div>
+      <button class="item-delete" onclick="deleteEntry('${dataKey}', ${e.id})">✕</button>
+    </div>
+  `).join('');
+}
+
+function deleteEntry(dataKey, id) {
+  data[dataKey] = data[dataKey].filter(e => e.id !== id);
+  saveData();
+  // Re-render
+  const sectionMap = {
+    'prophetEntries': 'daily-prophet-entries',
+    'bookIdeas': 'book-ideas-entries',
+    'spellbook': 'spellbook-entries',
+    'notes': 'notes-entries',
+    'dreams': 'dreams-entries',
+    'recipes': 'recipes-entries'
+  };
+  renderEntries(dataKey, sectionMap[dataKey]);
+}
+
+function addProphetEntry() {
+  const title = document.getElementById('prophet-title-input').value.trim();
+  const content = document.getElementById('prophet-content-input').value.trim();
+  if (!content) return;
+  data.prophetEntries.push({ id: Date.now(), title, content, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('prophet-title-input').value = '';
+  document.getElementById('prophet-content-input').value = '';
+  saveData();
+  renderEntries('prophetEntries', 'daily-prophet-entries');
+}
+
+function addBookIdea() {
+  const title = document.getElementById('book-idea-title').value.trim();
+  const content = document.getElementById('book-idea-content').value.trim();
+  if (!content && !title) return;
+  data.bookIdeas.push({ id: Date.now(), title, content: content || title, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('book-idea-title').value = '';
+  document.getElementById('book-idea-content').value = '';
+  addPoints(15, 'Kitap fikri eklendi');
+  saveData();
+  renderEntries('bookIdeas', 'book-ideas-entries');
+  showToast('📖 Yeni fikir eklendi! +15 puan');
+}
+
+function addSpell() {
+  const title = document.getElementById('spell-title').value.trim();
+  const content = document.getElementById('spell-content').value.trim();
+  if (!content && !title) return;
+  data.spellbook.push({ id: Date.now(), title, content: content || title, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('spell-title').value = '';
+  document.getElementById('spell-content').value = '';
+  saveData();
+  renderEntries('spellbook', 'spellbook-entries');
+  showToast('🪄 Büyü defterine eklendi!');
+}
+
+function addNote() {
+  const title = document.getElementById('note-title').value.trim();
+  const content = document.getElementById('note-content').value.trim();
+  if (!content && !title) return;
+  data.notes.push({ id: Date.now(), title, content: content || title, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('note-title').value = '';
+  document.getElementById('note-content').value = '';
+  saveData();
+  renderEntries('notes', 'notes-entries');
+  showToast('✨ Not kaydedildi!');
+}
+
+function addDream() {
+  const title = document.getElementById('dream-title').value.trim();
+  const content = document.getElementById('dream-content').value.trim();
+  if (!content && !title) return;
+  data.dreams.push({ id: Date.now(), title, content: content || title, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('dream-title').value = '';
+  document.getElementById('dream-content').value = '';
+  saveData();
+  renderEntries('dreams', 'dreams-entries');
+  showToast('💤 Rüya kaydedildi!');
+}
+
+function addRecipe() {
+  const title = document.getElementById('recipe-title').value.trim();
+  const content = document.getElementById('recipe-content').value.trim();
+  if (!content && !title) return;
+  data.recipes.push({ id: Date.now(), title, content: content || title, date: new Date().toLocaleDateString('tr-TR') });
+  document.getElementById('recipe-title').value = '';
+  document.getElementById('recipe-content').value = '';
+  saveData();
+  renderEntries('recipes', 'recipes-entries');
+  showToast('🍳 Tarif eklendi!');
+}
+
+// ====== REMINDERS ======
+function renderReminders() {
+  const container = document.getElementById('reminders-list');
+  container.innerHTML = data.reminders.map(r => `
+    <div class="reminder-item">
+      <input type="checkbox" ${r.done ? 'checked' : ''} onchange="toggleReminder(${r.id})">
+      <div style="flex:1;">
+        <div class="item-text ${r.done ? 'checked' : ''}">${r.text}</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);">${r.time || ''}</div>
+      </div>
+      <button class="item-delete" onclick="deleteReminder(${r.id})" style="opacity:1;">✕</button>
+    </div>
+  `).join('');
+  if (data.reminders.length === 0) {
+    container.innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:20px;font-style:italic;">Henüz hatırlatıcı yok.</div>';
+  }
+}
+
+function addReminder() {
+  const text = document.getElementById('reminder-text-input').value.trim();
+  const time = document.getElementById('reminder-time-input').value.trim();
+  if (!text) return;
+  data.reminders.push({ id: Date.now(), text, time, done: false });
+  document.getElementById('reminder-text-input').value = '';
+  document.getElementById('reminder-time-input').value = '';
+  saveData();
+  renderReminders();
+  updateHomeWidgets();
+  showToast('⏰ Hatırlatıcı eklendi!');
+}
+
+function toggleReminder(id) {
+  const rem = data.reminders.find(r => r.id === id);
+  if (rem) {
+    rem.done = !rem.done;
+    if (rem.done) {
+      addPoints(10, `Hatırlatıcı: ${rem.text}`);
+      showToast(`✅ Tamamlandı! +10 puan`);
+    }
+    saveData();
+    renderReminders();
+    updateHomeWidgets();
+  }
+}
+
+function deleteReminder(id) {
+  data.reminders = data.reminders.filter(r => r.id !== id);
+  saveData();
+  renderReminders();
+  updateHomeWidgets();
+}
+
+// ====== HOUSE POINTS ======
+const MILESTONES = [
+  { points: 100, name: '🌟 Yıldız Öğrenci', desc: '100 puana ulaştın!' },
+  { points: 250, name: '⚡ Büyücü Çırağı', desc: '250 puana ulaştın!' },
+  { points: 500, name: '🏆 Sihir Ustası', desc: '500 puana ulaştın!' },
+  { points: 1000, name: '🔮 Efsane', desc: '1000 puana ulaştın!' },
+  { points: 2000, name: '👑 Büyük Büyücü', desc: '2000 puana ulaştın!' }
+];
+
+function addPoints(amount, reason) {
+  data.points += amount;
+  data.pointsLog.unshift({ amount, reason, date: new Date().toLocaleDateString('tr-TR') + ' ' + new Date().toLocaleTimeString('tr-TR', {hour:'2-digit',minute:'2-digit'}) });
+  if (data.pointsLog.length > 50) data.pointsLog = data.pointsLog.slice(0, 50);
+  saveData();
+  updateHomeWidgets();
+}
+
+function renderHousePoints() {
+  document.getElementById('total-points').textContent = data.points;
+  
+  // Progress bar
+  const nextMilestone = MILESTONES.find(m => m.points > data.points) || MILESTONES[MILESTONES.length - 1];
+  const prevMilestone = MILESTONES.slice().reverse().find(m => m.points <= data.points);
+  const prevPts = prevMilestone ? prevMilestone.points : 0;
+  const pct = Math.min(100, ((data.points - prevPts) / (nextMilestone.points - prevPts)) * 100);
+  document.getElementById('points-bar').style.width = pct + '%';
+  document.getElementById('next-milestone-text').textContent = 
+    data.points >= MILESTONES[MILESTONES.length-1].points ? '🎉 Tüm rozetleri kazandın!' : `Sonraki rozet: ${nextMilestone.points} puan (${nextMilestone.name})`;
+
+  // Badges
+  const badgesContainer = document.getElementById('badges-container');
+  badgesContainer.innerHTML = MILESTONES.map(m => `
+    <span class="badge ${data.points >= m.points ? 'earned' : 'locked'}">
+      ${m.name} ${data.points >= m.points ? '✓' : '🔒'}
+    </span>
+  `).join('');
+
+  // Log
+  const logContainer = document.getElementById('points-log');
+  logContainer.innerHTML = data.pointsLog.map(l => `
+    <div class="points-log-item">
+      <span>${l.reason}</span>
+      <span class="pts">+${l.amount}</span>
+    </div>
+  `).join('') || '<div style="color:var(--text-muted);text-align:center;padding:10px;">Henüz puan yok.</div>';
+}
+
+function resetWeeklyPoints() {
+  if (confirm('Haftalık puanları sıfırlamak istediğine emin misin?')) {
+    data.points = 0;
+    data.pointsLog = [];
+    saveData();
+    renderHousePoints();
+    updateHomeWidgets();
+    showToast('🔄 Puanlar sıfırlandı. Yeni hafta, yeni başlangıç!');
+  }
+}
+
+function addManualPoints() {
+  const amount = prompt('Kaç puan eklemek istiyorsun?');
+  const num = parseInt(amount);
+  if (num && num > 0) {
+    addPoints(num, 'Manuel ekleme');
+    renderHousePoints();
+    showToast(`+${num} puan eklendi!`);
+  }
+}
+
+// ====== UTILITIES ======
+function updateHomeWidgets() {
+  const pts = document.getElementById('home-points');
+  const shop = document.getElementById('home-shopping-count');
+  const rem = document.getElementById('home-reminders-count');
+  if (pts) pts.textContent = data.points;
+  if (shop) shop.textContent = data.shopping.filter(i => !i.checked).length;
+  if (rem) rem.textContent = data.reminders.filter(r => !r.done).length;
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// ====== PARTICLES ======
+function initParticles() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const particles = [];
+  const PARTICLE_COUNT = 40;
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -Math.random() * 0.5 - 0.1,
+      size: Math.random() * 2.5 + 0.5,
+      opacity: Math.random() * 0.6 + 0.2,
+      flickerSpeed: Math.random() * 0.02 + 0.005,
+      flickerOffset: Math.random() * Math.PI * 2,
+      hue: Math.random() * 30 + 25 // warm golden range
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const time = Date.now() * 0.001;
+
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Wrap
+      if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+      if (p.x < -10) p.x = canvas.width + 10;
+      if (p.x > canvas.width + 10) p.x = -10;
+
+      const flicker = Math.sin(time * p.flickerSpeed * 50 + p.flickerOffset) * 0.3 + 0.7;
+      const alpha = p.opacity * flicker;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${p.hue}, 80%, 60%, ${alpha})`;
+      ctx.fill();
+
+      // Glow
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size * 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${p.hue}, 80%, 50%, ${alpha * 0.15})`;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// ====== INIT ======
+document.addEventListener('DOMContentLoaded', () => {
+  initParticles();
+  renderHome();
+});
+</script>
+
+
+</body></html>
