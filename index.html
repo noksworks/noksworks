@@ -1,2 +1,23 @@
 <!DOCTYPE html>
 <!-- saved from url=(0151)https://customer-assets-v7afamib.emergentagent.net/wingman/92152b36-d617-4167-b6a9-e37797323465/attachments/54638fed2cc34c259f13ea6555fb289e_index.html -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merve'nin Sihirli Dünyası ✨</title></head><body><script>
+// DATA SYNC: Load from data.json first, fallback to localStorage
+async function loadData() {
+  const DEFAULT = {points:0,pointsLog:[],dailyQuest:'',shopping:[],potions:[],plants:[],goals:[],recipes:[],bookIdeas:[],spellbook:[],notes:[],dreams:[],reminders:[],prophetEntries:[],lastResetDate:null};
+  try {
+    const res = await fetch('/data.json');
+    if (res.ok) {
+      const remote = await res.json();
+      const merged = Object.assign({}, DEFAULT, remote);
+      localStorage.setItem('merve-dashboard', JSON.stringify(merged));
+      return merged;
+    }
+  } catch(e) {}
+  const saved = localStorage.getItem('merve-dashboard');
+  return saved ? Object.assign({}, DEFAULT, JSON.parse(saved)) : DEFAULT;
+}
+</script>
+<p>Redirect placeholder - full file push in progress</p></body></html>
